@@ -1,0 +1,12 @@
+version: '3'
+
+services: 
+  memcached:
+    image: memcached:1.6.9-alpine
+    container_name: memcached-e-node
+    command: ["-vv"] # Habilita logs detalhados
+    ports:
+      - "11211:11211"
+
+  # network-multitool:
+  #   image: praqma/network-multitool:alpine-3.12
